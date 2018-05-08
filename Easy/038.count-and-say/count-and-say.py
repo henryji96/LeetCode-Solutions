@@ -8,6 +8,15 @@ class Solution:
         for i in range(1,n):
             ans = self.sayNum(ans)
         return ans
+#     recursion   
+#     def countAndSay(self, n):
+#         """
+#         :type n: int
+#         :rtype: str
+#         """
+#         if n == 1:
+#             return "1"
+#         return self.sayNum(self.countAndSay1(n - 1))
             
     
     def sayNum(self, nums):
