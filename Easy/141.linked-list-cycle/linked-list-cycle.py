@@ -14,10 +14,13 @@ class Solution(object):
         if not head:
             return False
 
-        q = head
-        while not q:
-            if(q == head):
+        nodeSet = set()
+
+
+        while head!= None:      # O(n)
+            nodeSet.add(head)
+            head = head.next
+            if head in nodeSet:
                 return True
-            q = q.next
-            
+
         return False
