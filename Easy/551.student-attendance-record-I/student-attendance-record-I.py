@@ -27,3 +27,29 @@ class Solution(object):
                 if aNum >=2:
                     return False
         return True
+
+
+
+class Solution2(object):
+    def checkRecord(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if len(s) < 2:
+            return True
+
+        aNum = 0
+        lNum = 0
+        for c in s:
+            if c == "A":
+                aNum += 1
+
+            if c == "L":
+                lNum += 1
+            else:
+                lNum = 0
+
+            if aNum >= 2 or lNum >= 3:
+                return False
+        return True
