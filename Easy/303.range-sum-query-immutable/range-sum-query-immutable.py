@@ -22,3 +22,21 @@ class NumArray(object):
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)
 # param_1 = obj.sumRange(i,j)
+class NumArray2(object):
+
+    def __init__(self, nums):
+        """
+        :type nums: List[int]
+        """
+        self.sumDict = {-1:0}
+        for i in range(len(nums)):
+            self.sumDict[i] = nums[i] + self.sumDict[i-1]
+
+
+    def sumRange(self, i, j):
+        """
+        :type i: int
+        :type j: int
+        :rtype: int
+        """
+        return self.sumDict[j] - self.sumDict[i-1]
