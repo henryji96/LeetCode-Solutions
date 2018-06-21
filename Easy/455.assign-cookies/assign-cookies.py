@@ -5,17 +5,22 @@ class Solution(object):
         :type s: List[int]
         :rtype: int
         """
-        if len(g) == 0 or len(s) == 0:
+        if g == [] or s == []:
             return 0
 
         s.sort()
         g.sort()
         ans = 0
+        j = 0
 
         for greed in g:
-            while (len(s) != 0) and (greed > s[0]):
-                del s[0]
-            if (len(s) != 0):
+            if (j == len(s)):
+                return ans   #early stop
+
+            while (j != len(s)) and (greed > s[j]):
+                j += 1
+
+            if (j != len(s)) :
                 ans += 1
-                del s[0]
+                j += 1
         return ans
