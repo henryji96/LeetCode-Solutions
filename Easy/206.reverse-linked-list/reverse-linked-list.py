@@ -9,12 +9,16 @@ class Solution:
         :type head: ListNode
         :rtype: ListNode
         """
+        if not head:
+            return None
         prev = None
         while head:
             cur = head
             head = head.next
             cur.next = prev
             prev = cur
+
+        return cur
 
 
 
