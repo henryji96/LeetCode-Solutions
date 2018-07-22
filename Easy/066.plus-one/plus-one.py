@@ -4,11 +4,7 @@ class Solution:
         :type digits: List[int]
         :rtype: List[int]
         """
-        digitsStr = ""
-        for digit in digits:
-            digitsStr = digitsStr + str(digit)
-        digitsInt = int(digitsStr) + 1
-        ans = []
-        for newDigit in str(digitsInt):
-            ans.append(int(newDigit))
-        return ans
+        xStr = "".join(str(x) for x in digits)
+        plus1 = int(xStr) + 1
+
+        return [int(x) for x in str(plus1)]
