@@ -12,3 +12,7 @@ class Solution(object):
             if word != "":
                 ans = ans + word + " "
         return ans[:-1]
+
+
+#One Line Solution
+#return ' '.join(s.split()[::-1])
