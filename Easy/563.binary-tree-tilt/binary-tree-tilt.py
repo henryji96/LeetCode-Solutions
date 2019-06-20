@@ -18,8 +18,6 @@ class Solution:
         return tilt + self.findTilt(root.left) + self.findTilt(root.right)
 
 
-
-
     def nodeSum(self, root):
         if not root:
             return 0
